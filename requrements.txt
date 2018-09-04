@@ -1,0 +1,13 @@
+certifi==2018.4.16
+chardet==3.0.4
+idna==2.7
+mongoengine==0.15.3
+pymongo==3.7.1
+pyTelegramBotAPI==3.6.5
+requests==2.19.1
+six==1.11.0
+SQLAlchemy==1.2.10
+telegram==0.0.1
+urllib3==1.23
+XlsxWriter==1.0.9
+
