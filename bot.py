@@ -188,15 +188,11 @@ def setting_level(message):
         learn_words.close()
         menu(user_ID)
     elif message.text == config.levels[language]['elems'][2]:
-        users_db.set_settings(user_ID, {'level': "4"})
+        users_db.set_settings(user_ID, {'level': "3"})
         learn_words[str(user_ID)] = session.query(dbsqlite.Words).filter(
-            dbsqlite.Words.level == users_db.get_param(user_ID, 'level')).all()
+            dbsqlite.Words.level <= users_db.get_param(user_ID, 'level')).all()
         learn_words.close()
         menu(user_ID)
-    # elif message.text == config.levels[language]['elems'][3]:
-    # texts = config.choose_type_of_learning
-    # msg = bot.send_message(message.chat.id, 'Back')
-    # bot.register_next_step_handler(msg, choose_type_learning)
     else:
         menu(user_ID)
 
